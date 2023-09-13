@@ -6,6 +6,7 @@ import '../Register/style.css'
 import Country from '../../Api/Country';
 import Cities from '../../Api/Cities';
 import States from '../../Api/States';
+import { Heading, LoginContainer } from '../../StyledComponent/LoginStyle';
 const Register = () => {
     const [languageOptions, setLanguageOptions] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState('');
@@ -30,7 +31,7 @@ const Register = () => {
         console.log(`Selected City: ${e.target.value}`); //selected city
         formik.setFieldValue('city', e.target.value);
     };
-//Language fetching api
+    //Language fetching api
     useEffect(() => {
         // Fetch data from the API using axios
         axios.get('https://65002c0e18c34dee0cd46da3.mockapi.io/Languages')
@@ -93,11 +94,11 @@ const Register = () => {
                     <div className="row">
                         <div className="col-lg-12 my-5">
                             <div className="top">
-                                <h2 id="heading"><span class="text-bg-success p-3 rounded-2 ">Registration Form</span></h2>
+                                <Heading>Registration Form</Heading>
                             </div>
                         </div>
                     </div>
-                    <div className="mid mt-2">
+                    <LoginContainer width="100%" padding="40px" height="100%">
                         <div className="row my-2">
                             <div className="col-lg-6 my-2">
                                 <div className="form-val text-start ">
@@ -277,6 +278,13 @@ const Register = () => {
                         <div className="row">
                             <div className="col-lg-12 my-2">
                                 <div className="bt">
+                                <button
+                                    className="btn btn-warning mt-2 mx-2"
+                                    id="loginbtn"
+                                    type="button" // Set type to button, as this won't be a form submission
+                                >
+                                    Login
+                                </button>
                                     <button
                                         className="btn btn-success mt-2"
                                         id="submitbtn"
@@ -284,10 +292,11 @@ const Register = () => {
                                     >
                                         Register
                                     </button>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </LoginContainer>
                 </div>
             </form >
         </div >

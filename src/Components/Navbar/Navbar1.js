@@ -31,17 +31,17 @@ const Navbar1 = ({ auth }) => {
                 <div className="navbar-nav align-items-center ms-auto">
                     <div className="nav-item dropdown">
                         <a href="" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i className="fa fa-envelope me-lg-2"></i>
-                            <span className="d-none d-lg-inline-flex">Message</span>
+                        <i class="fa-solid fa-store me-2"></i>
+                            <span className="d-none d-lg-inline-flex">Products</span>
                         </a>
                         <div className="dropdown-menu dropdown-menu-end bg-dark border-0 rounded-0 rounded-bottom m-0">
                             {/* Message items */}
                         </div>
                     </div>
                     <div className="nav-item dropdown">
-                        <a href="" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i className="fa fa-bell me-lg-2"></i>
-                            <span className="d-none d-lg-inline-flex">Notification</span>
+                        <a href="" className="nav-link ">
+                        <i class="fa-solid fa-cart-shopping  me-2"></i>
+                            <span className="d-none d-lg-inline-flex">Cart</span>
                         </a>
                         <div className="dropdown-menu dropdown-menu-end bg-dark border-0 rounded-0 rounded-bottom m-0">
                             {/* Notification items */}
@@ -71,7 +71,7 @@ const Navbar1 = ({ auth }) => {
             <div className="sidebar pe-4 pb-3">
                 <nav className="navbar  navbar-dark">
                     <a href="" className="navbar-brand mx-4 mb-3">
-                        <h3 className="text-danger"><i className="fa fa-user-edit me-2"></i>DarkPan</h3>
+                        <h3 className="text-warning"><i class="fa-brands fa-shopify me-2"></i>Shop Cart</h3>
                     </a>
                     <div className="d-flex align-items-center ms-4 mb-4">
                         <div className="position-relative">
@@ -86,9 +86,9 @@ const Navbar1 = ({ auth }) => {
                         <NavLink to="/" className="nav-item m-0 nav-link ">
                             <i className="fa fa-tachometer-alt me-2"></i>Dashboard
                         </NavLink>
-                        <a href="" className="nav-item nav-link m-0"><i className="fa fa-keyboard me-2"></i>Forms</a>
-                        <a href="" className="nav-item nav-link m-0"><i className="fa fa-table me-2"></i>Tables</a>
-                        <a href="" className="nav-item nav-link m-0"><i className="fa fa-chart-bar me-2"></i>Cart</a>
+                        <a href="" className="nav-item nav-link m-0"><i class="fa-solid fa-store me-2"></i>Products</a>
+                        <a href="" className="nav-item nav-link m-0"><i class="fa-solid fa-gift me-2"></i>Orders</a>
+                        <a href="" className="nav-item nav-link m-0"><i class="fa-solid fa-cart-shopping  me-2"></i>Cart</a>
                         <div className="nav-item dropdown m-0">
                             <a href="" className="nav-link m-0 dropdown-toggle" data-bs-toggle="dropdown"><i className="far fa-file-alt me-2"></i>Pages</a>
                             <div className="dropdown-menu bg-transparent border-0">
@@ -96,8 +96,6 @@ const Navbar1 = ({ auth }) => {
                                 <button className="dropdown-item " onClick={handleSignup}>
                                     Sign up
                                 </button>
-                                <a href="" className="dropdown-item">404 Error</a>
-                                <a href="" className="dropdown-item">Blank Page</a>
                             </div>
                         </div>
                     </div>

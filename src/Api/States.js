@@ -15,7 +15,7 @@ const States = ({ apiLink }) => {
                 setStates(stateNames);
             })
             .catch(error => console.error('Error fetching countries:', error));
-    }, []);
+    }, [apiLink]);
     return (
         <datalist id="Statelist">
             {states.map((states, index) => (

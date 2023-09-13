@@ -11,19 +11,24 @@ const Contain = styled.div`
 
 const LoginContainer = styled.div`
   background-color: #ffffff;
-  padding: ${props => props.padding || '20px'}; /* Use the prop to set padding, default to 20px */
+  padding: ${props => props.padding || '20px'};
   border-radius: 20px;
   box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
-  width: ${props => props.width || '400px'}; /* Use the prop to set width, default to 400px */
-  height:${props => props.height ||'500px'};
+  width: ${props => props.width || '400px'};
+  height: ${props => props.height || '500px'};
+  margin-left: ${props => props.mrgL ||'0px'};
+  margin-right: ${props => props.mrgR ||'0px'}
 `;
+
 
 const Heading = styled.h1`
   font-size: 56px;
   background: -webkit-linear-gradient(#8c22bd, #3532ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center; 
 `;
+
 
 const WelcomeText = styled.h2`
   font-family: "Helvetica Neue", sans-serif;
@@ -33,6 +38,7 @@ const WelcomeText = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
+  text-align: center; 
 `;
 
 const InputField = styled.input`

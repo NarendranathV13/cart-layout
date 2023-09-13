@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const States = ({ apiLink }) => {
+const Cities = ({ apiLink }) => {
     const [states, setStates] = useState([]);
     useEffect(() => {
         axios.get(apiLink, {
@@ -15,7 +15,7 @@ const States = ({ apiLink }) => {
                 setStates(stateNames);
             })
             .catch(error => console.error('Error fetching countries:', error));
-    }, []);
+    }, [apiLink]);
     return (
         <datalist id="Citylist">
             {states.map((states, index) => (
@@ -24,4 +24,4 @@ const States = ({ apiLink }) => {
         </datalist>
     );
 };
-export default States;
+export default Cities;

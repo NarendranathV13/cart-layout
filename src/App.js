@@ -1,13 +1,15 @@
 import './App.css';
 // import Demo2 from './Components/demo2';
-import Login from './Pages/Login/Login';
-import Register from './Pages/Register/Register';
+import { BrowserRouter} from "react-router-dom";
+import { useState } from 'react';
+import Router from './Router/Router';
 function App() {
+  const [isauth,setAuth]= useState("false")
   return (
-    <div className="App">
-      {/* <Register /> */}
-      <Login />
-      {/* <Demo2 /> */}
+    <div className={isauth == "true" ? "content" :"bg-light "}>
+       <BrowserRouter>
+        <Router auth={setAuth}/>
+      </BrowserRouter>
     </div>
   );
 }

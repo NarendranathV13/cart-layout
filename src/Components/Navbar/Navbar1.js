@@ -55,9 +55,15 @@ const Navbar1 = ({ auth }) => {
                             <a href="" className="dropdown-item">My Profile</a>
                             <a href="" className="dropdown-item">Settings</a>
                             <button className="dropdown-item " onClick={handleLogout}>
-                                Log-out
+                            <i class="fa-solid fa-arrow-right-to-bracket "></i>
+                               <span className="mx-1">Log out</span> 
                             </button>
                         </div>
+                    </div>
+                    <div className="nav-item">
+                        <button  className="nav-link log"  onClick={handleLogout}>
+                        <i class="fa-solid fa-right-to-bracket" id="log1"></i>
+                        </button>
                     </div>
                 </div>
             </nav>

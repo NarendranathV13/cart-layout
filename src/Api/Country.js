@@ -5,13 +5,14 @@ const Country = ({ apiLink }) => {
     useEffect(() => {
         axios.get(apiLink, {
             headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJuYXJlbmRyYW5hdGgudkBhcmtpbmZvdGVjLmNvbSIsImFwaV90b2tlbiI6Il82UWhrYnFTMXhpeF9Zd1k4U2x2YWl0dHFRZ3gxYVVUNWhrVTVlMjJENUp1ZW4yXzI5OHE0SU9vLXR0WVU5ZzhYY28ifSwiZXhwIjoxNjk0NjExODc1fQ.4ZBHJM6QoZ1Xbvhe12vnrEFIz0Soifmfj-hkqeZUO5w",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJuYXJlbmRyYW5hdGgudkBhcmtpbmZvdGVjLmNvbSIsImFwaV90b2tlbiI6Il82UWhrYnFTMXhpeF9Zd1k4U2x2YWl0dHFRZ3gxYVVUNWhrVTVlMjJENUp1ZW4yXzI5OHE0SU9vLXR0WVU5ZzhYY28ifSwiZXhwIjoxNjk0Njk5NDMwfQ.fwAP4cfyyx4uIgYYt_Pq_jt2oEjmmvw5NVXB-zbC0x8",
                 "Accept": "application/json"
             }
         })
         .then(response => {
+            console.log("hii",response)
             const countryNames = response.data.map(country => country.country_name);
-            console.log(apiLink)
+
             setCountries(countryNames);
         })
         .catch(error => console.error('Error fetching countries:', error));
